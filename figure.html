@@ -24,7 +24,7 @@
         </header>
         
         <main class="main">
-            <section class="form-section">
+            <section class="form-section-square">
                 <h2 class="form-title">Calcula el área y perímetro de un cuadrado</h2>           
 
                 <form action="" class="form">
@@ -36,7 +36,7 @@
                 </form>
             </section>
 
-            <section class="form-section">
+            <section class="form-section-triangle">
                 <h2 class="form-title">Calcula el área y perímetro de un triángulo</h2>           
 
                 <form action="" class="form">
@@ -59,6 +59,20 @@
 
                     <button type="button" onclick="calcularPerimetroTriangulo()">Calcula el perímetro</button>
                     <button type="button" onclick="calcularAreaTriangulo()">Calcula el área</button>
+                </form>
+            </section>
+
+            <section class="form-section-circle">
+                <h2 class="form-title">Calcula el diametro, perímetro y área de un circulo</h2>           
+
+                <form action="" class="form">
+                    <label for="input-circulo">Escribe cuánto mide el radio de tu círculo:</label>
+                    <br>
+                    <input type="number" id="input-circulo" />
+                    <br>
+                    <button type="button" onclick="calcularDiametroCirculo()">Calcula el diametro</button>
+                    <button type="button" onclick="calcularPerimetroCirculo()">Calcula el perímetro</button>
+                    <button type="button" onclick="calcularAreaCirculo()">Calcula el área</button>
                 </form>
             </section>
         </main>

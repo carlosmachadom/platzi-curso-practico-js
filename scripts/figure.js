@@ -106,3 +106,26 @@ function calcularAreaTriangulo() {
 }
 
     // CÍRCULO
+function calcularDiametroCirculo() {
+    const inputR = document.getElementById('input-circulo');
+    const valueR = parseInt(inputR.value);
+
+    const diametro = diametroCirculo(valueR);
+    alert(diametro);
+}
+
+function calcularPerimetroCirculo() {
+    const inputR = document.getElementById('input-circulo');
+    const valueR = parseInt(inputR.value);
+
+    const perimetro = perimetroCirculo(valueR);
+    alert(perimetro.toFixed(2));
+}
+
+function calcularAreaCirculo() {
+    const inputR = document.getElementById('input-circulo');
+    const valueR = parseInt(inputR.value);
+
+    const area = areaCirculo(valueR);
+    alert(area.toFixed(2));
+}
