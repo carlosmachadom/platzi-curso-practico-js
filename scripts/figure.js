@@ -56,7 +56,7 @@ function calcularPerimetroCuadrado() {
         // Tomar el input de mi documento HTML por su ID
     const input = document.getElementById('input-cuadrado');
         // Tomando el contenido o dato que se requiere del input
-    const value = input.value;
+    const value = parseInt(input.value);
         // Implementando la fórmula o funciones establecidas anteriormente
     const perimetro = perimetroCuadrado(value);
         // Mostrando el resultado
@@ -67,7 +67,7 @@ function calcularAreaCuadrado() {
         // Tomar el input de mi documento HTML por su ID
     const input = document.getElementById('input-cuadrado');
         // Tomando el contenido o dato que se requiere del input
-    const value = input.value;
+    const value = parseInt(input.value);
         // Implementando la fórmula o funciones establecidas anteriormente
     const area = areaCuadrado(value);
         // Mostrando el resultado

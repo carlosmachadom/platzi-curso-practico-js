@@ -1,0 +1,137 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.figure-body
+{
+    width: 100%;
+    height: 100%;
+}
+
+.figure-body .header
+{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.header .title
+{
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 50px;
+    vertical-align: middle;
+    margin-bottom: .5rem;
+}
+
+.header .text 
+{
+    font-size: 1.8rem;
+}
+
+.figure-body .main
+{
+    width: 100%;
+    min-height: 80%;
+    padding: 2rem 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    place-items: center;
+    gap: 2.6rem;
+}
+
+.main .form-section
+{
+    width: 90%;
+    max-width: 320px;
+    min-height: 360px;
+    padding: 2.4rem  1.8rem;
+    border: solid 2px black;
+    border-radius: 18px; 
+}
+
+.main .form-section .form-title
+{
+    font-size: 1.8rem;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.form-section .form
+{
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.form-section .form label 
+{
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-top: 2.4rem;
+    text-align: start;
+}
+
+.form-section .form input[type="text"]
+{
+    height: 35px;
+    display: inline-block;
+}
+
+.form-section .form .button
+{
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.form-section.square .form input[type="text"] 
+{
+    width: 20%;   
+    margin: 1rem 0 1rem 1rem;
+}
+
+.form-section .form .button.perimetro
+{
+    margin: 0 2rem 0 0;
+} 
+
+.form-section.triangle .form 
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-section.triangle .form label
+{
+    width: 40%;
+    margin-top: 1rem;
+}
+
+.form-section.triangle .form input[type="text"]
+{
+    width: 50%;
+    margin: 0 0 2rem 1rem;
+}
+
+.form-section.triangle .form .button.area
+{
+    margin-top: 0;
+}
+
