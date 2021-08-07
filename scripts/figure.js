@@ -27,6 +27,26 @@ function areaTriangulo(base, altura) {
 }
 console.groupEnd();
 
+/* Experimento y ejercicio triangulo isoseles formula */
+console.group('Isoseles');
+function alturaTrianguloI(ladoI, ladoD, base) {
+    let lados;
+    let baset;
+
+    lados = (ladoI + ladoD) / 2;
+    
+
+    baset = base / 2;  
+    
+
+    let altura = (lados * lados) - (baset * baset);
+    
+
+    altura = Math.sqrt(altura);
+    alert(`La altura de el triangulo isoseles es de: ${altura}cms`);
+}
+
+console.groupEnd();
 
 // Aquí empieza el círculo
 console.group('Círculos');
@@ -128,4 +148,27 @@ function calcularAreaCirculo() {
 
     const area = areaCirculo(valueR);
     alert(area.toFixed(2));
+}
+
+    // ISOSELES
+function calcularAlturaTriangulo() {
+    const inputLIZ = document.getElementById('input-isoseles-lado-izquierdo');
+    const valueLIZ = parseInt(inputLIZ.value);
+    /* console.log(valueLIZ); */
+
+    const inputDE = document.getElementById('input-isoseles-lado-derecho');
+    const valueDE = parseInt(inputDE.value);
+    /* console.log(valueDE); */
+
+    const inputBE = document.getElementById('input-isoseles-lado-base');
+    const valueBE = parseInt(inputBE.value); 
+    /* console.log(valueBE); */
+
+    let altura;
+
+    if(valueLIZ === valueDE) {        
+        altura = alturaTrianguloI(valueLIZ, valueDE, valueBE);      
+    } else {
+        alert('No es un triángulo isoseles');
+    }    
 }
