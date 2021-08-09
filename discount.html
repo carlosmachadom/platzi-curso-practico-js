@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <head>
+        <!-- METAS -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- /METAS -->
+
+        <!-- LINKS -->
+        <link rel="stylesheet" href="./style/discount.css">
+        <!-- /LINKS -->
+
+        <title>Taller #2 - discount machine</title>
+    </head>
+    <!-- /HEAD -->
+
+    <!-- BODY -->
+    <body>
+        <!-- HEADER -->
+        <header>
+            <h1>Porcentajes y descuentos</h1>
+            <P>Taller# 2 - Curso práctico de JS</P>
+        </header>  
+        <!-- /HEADER -->    
+        
+        <!-- NORMAL DISCOUNT SECTION -->
+        <section>
+            <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+
+            <form action="">
+                <label for="input-price">Escribe el precio de tu producto:</label>
+                <br>
+                <input type="number" id="input-price">
+                <br>
+                <label for="input-discount">Escribe el descuento del producto:</label>
+                <br>
+                <input type="number" id="input-discount">
+                <br>
+
+                <button type="button" onclick="buttonPriceDiscount()">Calcular el precio con descuento</button>
+
+                <p id="result-price"></p>
+            </form>
+        </section>
+        <!-- /NORMAL DISCOUNT SECTION -->
+
+        <!-- CUPON DISCOUNT SECTION -->
+        <section>
+            <h2>Calcula el precio a pagar de tus productos con descuento de cupones</h2>
+
+            <form action="">
+                <label for="input-price-cupon">Escribe el precio de tu producto:</label>
+                <br>
+                <input type="number" id="input-price-cupon" />
+                <br>
+                <label for="input-cupon">Escribe el descuento del producto:</label>
+                <br>
+                <input type="text" id="input-cupon" />
+                <br>
+
+                <button type="button" onclick="buttonCuponDiscount()">Calcular el precio con descuento de cupón</button>
+
+                <p id="result-cupon-price"></p>
+            </form>
+        </section>
+        <!-- /CUPON DISCOUNT SECTION -->
+
+        <!-- SCRIPTS -->
+        <script src="./scripts/discount.js"></script>
+        <!-- /SCRIPTS -->
+    </body>
+    <!-- /BODY -->
+</html>
