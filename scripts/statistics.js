@@ -14,18 +14,9 @@ function calcAritmeticMedian(list) {
 
 // Calculando el promedio de una lista de números
 // Recorriendo un array para calcular mediana con metodos array
-
-function calcAritmeticMedian(list) {
-    const sumList = list.reduce(
-        function (valorAcumulado = 0, newElement) {
-            return valorAcumulado + newElement;
-    });
-
-    const promedioList = sumList / list.length;
-    return promedioList;
-} 
-
 // Calculando la mediana de una lista de números
+
+/* 
 
 const listM = [
     100,
@@ -61,5 +52,46 @@ if (esPar(listM.length)) {
 
 } else {
     mediana = listM[midListM];
+} 
+*/
+
+
+function calcAritmeticMedian(list) {
+    const sumList = list.reduce(
+        function (valorAcumulado = 0, newElement) {
+            return valorAcumulado + newElement;
+    });
+
+    const promedioList = sumList / list.length;
+    return promedioList;
+} 
+
+function esPar(numero) {
+    if ( numero % 2 === 0 ) {
+        return true;
+    } else {
+        return false;
+    }    
 }
 
+function calculandoMediana(lista) {
+    
+    const mitad = parseInt(lista.length / 2);
+    
+    let mediana;
+
+    if (esPar(lista.length)) {
+        const element1 = lista[mitad - 1];
+        const element2 = lista[mitad];
+    
+        const promedio = calcAritmeticMedian([element1, element2]);
+        mediana = promedio;
+    
+    } else {
+        mediana = lista[mitad];
+    }
+
+    console.log(mediana);
+}
+
+calculandoMediana([100, 100, 100, 100]);
