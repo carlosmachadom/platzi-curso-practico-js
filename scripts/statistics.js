@@ -46,7 +46,6 @@ function calculandoMediana(lista) {
 }
 
 // Calculando la moda dentro de un conjunto de datos
-
 function calcularModa(lista) {
     console.log(lista);
 
@@ -71,25 +70,59 @@ function calcularModa(lista) {
     console.log(moda);
 }
 
-calcularModa([
-    2,
-    4,
-    2,
-    6,
-    9,
-    3,
-    5,
-    4,
-    5,
-    8,
-    9,
-    8,
-    7,
-    1,
-    1,
-    3,
-    8
-]);
+// Calculando el promedio ponderado
+const notasFinales = [
+    {
+        curso: 'Pensamiento Histórico',
+        nota: 3.8,
+        creditos: 3,
+    },
+    {
+        curso: 'Pensamiento Geográfico',
+        nota: 4.8,
+        creditos: 3,
+    },
+    {
+        curso: 'Constitución y democrácia',
+        nota: 4,
+        creditos: 1,
+    },
+    {
+        curso: 'Teorías del aprendizaje',
+        nota: 4.2,
+        creditos: 3,
+    },
+    {
+        curso: 'Grancolombianidad',
+        nota: 4.8,
+        creditos: 1,
+    },
+    {
+        curso: 'Competecias comunicativas',
+        nota: 4,
+        creditos: 2,
+    }
+];
+console.log(notasFinales);
 
-// forma más eficiente que: lista2[element] = lista2[element] + 1;
-// lista2[element] += 1;
+const notasXcreditos = notasFinales.map(materia => materia.nota * materia.creditos);
+console.log(notasXcreditos);
+
+const sumaNuevoArray = notasXcreditos.reduce(
+    function (valorAcumulado = 0, nuevoValor) {
+        return valorAcumulado + nuevoValor;
+    }
+);
+console.log(sumaNuevoArray);
+
+const creditos = notasFinales.map(materia => materia.creditos);
+console.log(creditos);
+
+const totalCreditos = creditos.reduce( 
+    function (valorAcumulado = 0, nuevoValor) {
+        return valorAcumulado + nuevoValor;
+});
+console.log(totalCreditos);
+
+const promedioNotas = sumaNuevoArray / totalCreditos;
+console.log(promedioNotas.toFixed(2));
