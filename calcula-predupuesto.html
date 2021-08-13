@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <head>
+        <!-- METAS -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- /METAS -->
+
+        <!-- LINKS -->
+        <link rel="stylesheet" href="./style/calcula-presupuesto.css">
+        <!-- /LINKS -->
+
+        <title>Ejercicio final - Calcular presupuesto</title>
+    </head>
+    <!-- /HEAD -->
+
+    <!-- BODY -->
+    <body>
+        <header>
+            <h1>Calcula presupuesto acorde salario</h1>
+            <p>Taller final</p>
+        </header>
+
+        <section>
+            <h2>Calcula según tus ingresos</h2>
+
+            <form action="">
+                <label for="ingresos-totales">Define tus ingresos totales en dólares:</label>
+                <input type="number" name="ingresos-totales" id="ingresos-totales" required />
+                <br>
+                <label for="gastos-fijos">Define tus gastos fijos totales:</label>
+                <input type="text" name="gastos-fijos" id="gastos-fijos" required />
+                <br>
+                <label for="gastos-variables">Define tus gastos variables totales:</label>
+                <input type="text" name="gastos-variables" id="gastos-variables" required />
+                <br>
+                <button type="button" onclick="calcularPresupuesto()">Calcular</button>
+            </form>
+
+            <article>
+                <h3>Tu presupuesto en dolares es de:</h3>
+                <p id="resultado"></p>
+            </article>
+        </section>
+        
+
+        <!-- SCRIPTS -->
+        <script src="./scripts/calcula-presupuesto.js"></script>
+        <!-- /SCRIPTS -->
+    </body>
+    <!-- /BODY -->
+</html>
